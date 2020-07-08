@@ -3,12 +3,12 @@ package bbapp.bumbameuboiservice.application.model
 import java.time.OffsetDateTime
 
 data class BumbaMeuBoiDto(
-        val id: String,
-        val name: String,
-        val city: String,
-        val createdDate: OffsetDateTime,
-        val lastModifiedDate: OffsetDateTime,
-        val accent: Accent
+        val id: String? = null,
+        val name: String? = null,
+        val city: String? = null,
+        val createdDate: OffsetDateTime? = OffsetDateTime.now(),
+        val lastModifiedDate: OffsetDateTime? = OffsetDateTime.now(),
+        val accent: Accent? = null
 )
 
 enum class Accent {

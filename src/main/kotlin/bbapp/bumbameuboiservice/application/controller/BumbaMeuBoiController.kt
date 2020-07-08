@@ -1,6 +1,7 @@
 package bbapp.bumbameuboiservice.application.controller
 
 import bbapp.bumbameuboiservice.application.model.BumbaMeuBoiDto
+import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping
@@ -20,11 +21,13 @@ class BumbaMeuBoiController {
     }
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     fun saveNewBumbaMeuBoi(@RequestBody bumbaMeuBoiDto: BumbaMeuBoiDto){
 
     }
 
     @PutMapping("/{bumbaMeuBoiId}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     fun updateBumbaMeuBoiById(
             @PathVariable("bumbaMeuBoiId") bumbaMeuBoiId: String,
             @RequestBody bumbaMeuBoiDto: BumbaMeuBoiDto
