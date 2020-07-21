@@ -1,0 +1,6 @@
+package bbapp.bumbameuboiservice.repositories
+
+import bbapp.bumbameuboiservice.domain.BumbaMeuBoi
+import org.springframework.data.repository.PagingAndSortingRepository
+
+interface BumbaMeuBoiRepository : PagingAndSortingRepository<BumbaMeuBoi, String>
